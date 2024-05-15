@@ -1,4 +1,6 @@
 resource "aws_eks_node_group" "eks_node" {
+
+  
   cluster_name    = aws_eks_cluster.terraform_eks_cluster.name
   node_group_name = "eks_node"
   node_role_arn   = aws_iam_role.eks_node_role.arn
@@ -10,6 +12,8 @@ resource "aws_eks_node_group" "eks_node" {
     max_size     = 2
     min_size     = 1
   }
+  
+
 
   update_config {
     max_unavailable = 1
@@ -22,4 +26,9 @@ resource "aws_eks_node_group" "eks_node" {
     aws_iam_role_policy_attachment.eks_node-AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.eks_node-AmazonEC2ContainerRegistryReadOnly,
   ]
+
+  tags = {
+    Name        = "eks-node"
+    
+  }
 }
