@@ -1,8 +1,0 @@
-vpc-name      = "eks-vpc"
-igw-name      = "eks-igw"
-subnet-name   = "eks-public_subnet1, eks_private_subnet1"
-rt-name       = "public-eks-route, private-eks-route"
-sg-name       = "eks-sg"
-instance-name = "eks-project-server"
-key-name      = "swapna"
-iam-role      = "eks_role"
