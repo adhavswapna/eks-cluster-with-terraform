@@ -1,4 +1,4 @@
-resource "aws_default_security_group" "default" {
+resource "aws_default_security_group" "eks-sg" {
   vpc_id = aws_vpc.eks-vpc.id
 
   ingress {
