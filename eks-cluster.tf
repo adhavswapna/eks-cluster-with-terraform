@@ -4,10 +4,8 @@ resource "aws_eks_cluster" "terraform_eks_cluster" {
 
   vpc_config {
     subnet_ids = [
-      aws_subnet.eks-public_subnet1.id, 
-      aws_subnet.eks-public_subnet2.id,
-      aws_subnet.eks_private_subnet1.id,
-      aws_subnet.eks_private_subnet2.id
+      aws_subnet.eks-public_subnet.id, 
+      aws_subnet.eks_private_subnet.id
       ]
   }
 
